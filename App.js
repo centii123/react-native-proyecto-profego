@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import { InicioPage } from "./pages/inicio";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+//import { KeyboardProvider } from "react-native-keyboard-controller";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    //<KeyboardProvider>
+      <SafeAreaProvider>
+      <View style={styles.container} className="bg-red-600">
+        <StatusBar style="light" />
+        <InicioPage />
+      </View>
+    </SafeAreaProvider>
+    //</KeyboardProvider>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1
   },
 });
