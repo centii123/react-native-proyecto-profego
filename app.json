@@ -8,9 +8,9 @@
     "userInterfaceStyle": "light",
     "scheme": "profeGo",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logocarga.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F29224"
     },
     "ios": {
       "supportsTablet": true

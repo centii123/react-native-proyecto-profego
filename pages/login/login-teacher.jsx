@@ -36,7 +36,7 @@ export function LoginTeacherPage() {
         <Link href={'/'} className="w-full text-right text-blue-600 mt-3 mr-28">
           ¿Olvidaste tu contraseña?
         </Link>
-        <Link href={'/'} className="py-3 mt-4 w-72 rounded-2xl justify-center items-center bg-orange-500 text-center">
+        <Link href={'/docente/registro-datos'} className="py-3 mt-4 w-72 rounded-2xl justify-center items-center bg-orange-500 text-center">
           <Text className="text-white text-2xl p-10">
           Ingresar
           </Text>

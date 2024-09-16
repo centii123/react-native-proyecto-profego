@@ -1,0 +1,97 @@
+import { Link } from "expo-router"
+import { View, Image, Text, ScrollView } from "react-native";
+import { Navegacion } from "../layouts/navegacion";
+//import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
+const barraTeacher = require('../../assets/barraTeacher.png')
+const barra1 = require('../../assets/fondo2.png')
+const logo = require('../../assets/logoOtro.png')
+const boys = require('../../assets/docenteEstando.png')
+
+//clases
+const íconodeclasesparticulares = require('../../assets/íconodeclasesparticulares.png')
+const clasesGrupales = require('../../assets/clasesGrupales.png')
+const couchingVirtual = require('../../assets/couchingVirtual.png')
+const cursos = require('../../assets/cursos.png')
+const docentes = require('../../assets/docentes.png')
+
+//loadImg
+
+export function InicioDocentePage() {
+    return (
+        <View className="flex-1">
+            <View className=" flex-1">
+                <Image source={barra1} className="w-full rounded mb-20" />
+            </View>
+            <ScrollView >
+
+                <View className="flex-1 mt-24">
+                    <Image source={barraTeacher} className="w-full rounded" />
+                    <Text className="text-center text-orange-500 text-3xl mt-5">¡Bienvenido José Pérez!</Text>
+                    <View className="flex-row justify-around items-center mt-2">
+                        <Text className="w-52 ml-10 mr-0 text-base">Elige entre servicios que puedes crear o los existentes. 
+                        ¡Tu enseñanza, tu elección!</Text>
+                        <Image source={boys} />
+                    </View>
+                </View>
+                <View className="items-center">
+                    <Link href={'/docente/catalogo'} className="py-3 mt-4 w-96 rounded-2xl justify-center items-center bg-teal-800 text-center">
+                        <Text className="text-white text-2xl p-10">
+                            Clases
+                        </Text>
+                    </Link>
+                </View>
+                <Text className=" text-lg ml-6 mt-4">¿Qué encontrarás?</Text>
+                <View className="flex-row items-center ml-5 mt-3">
+                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
+                        <Image source={íconodeclasesparticulares} style={{ width: 80, height: 70 }} />
+                    </View>
+                    <Text className="text-xl w-60">Clases particulares</Text>
+                </View>
+                <View className="flex-row items-center ml-5 mt-3">
+                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
+                        <Image source={clasesGrupales} style={{ width: 80, height: 70 }} />
+                    </View>
+                    <Text className="text-xl w-60">Clases grupales</Text>
+                </View>
+                <View className="flex-row items-center ml-5 mt-3">
+                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
+                        <Image source={couchingVirtual} style={{ width: 80, height: 70 }} />
+                    </View>
+                    <Text className="text-xl w-60">Coaching individual para docentes</Text>
+                </View>
+
+                <View className="items-center">
+                    <Link href={'/estudiante/inicio'} className="py-3 mt-4 w-96 rounded-2xl justify-center items-center bg-blue-600 text-center">
+                        <Text className="text-white text-2xl p-10">
+                            Cursos
+                        </Text>
+                    </Link>
+                </View>
+                <Text className=" text-lg ml-6 mt-4">¿Qué encontrarás?</Text>
+                <View className="flex-row items-center ml-5 mt-3">
+                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
+                        <Image source={cursos} style={{ width: 80, height: 70 }} />
+                    </View>
+                    <Text className="text-xl w-60">Cursos</Text>
+                </View>
+                <View className="flex-row items-center ml-5 mt-3 mb-40">
+                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
+                        <Image source={docentes} style={{ width: 80, height: 70 }} />
+                    </View>
+                    <Text className="text-xl w-60">Coaching para docentes</Text>
+                </View>
+
+
+            </ScrollView>
+
+            <View className="w-full flex-row justify-center items-center px-3 absolute mt-5">
+                <Image source={logo} className="mr-3" style={{ width: 90, height: 60 }} />
+            </View>
+
+            <Navegacion />
+
+        </View>
+
+
+    );
+}
