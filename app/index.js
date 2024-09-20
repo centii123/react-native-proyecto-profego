@@ -1,6 +1,12 @@
 import { InicioPage } from "../pages/inicio";
+import { PaginaPadin } from "../pages/layout/paginas";
 
 
 export default function Index() {
-    return <InicioPage />
+    return (
+        <PaginaPadin>
+            <InicioPage />
+        </PaginaPadin>
+        
+    )
 }

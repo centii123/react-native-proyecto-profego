@@ -1,18 +1,25 @@
 import { Link } from "expo-router"
 import { View, Image, Text, ScrollView } from "react-native";
-import { Navegacion } from "../layouts/navegacion";
 import { Video } from 'expo-av';
 
 //imagenes
+const barra1 = require('../../assets/fondoPantalla.png')
+const barra2 = require('../../assets/barra2.png')
 const mundo = require('../../assets/mundo.png')
 const casa = require('../../assets/casa.png')
 const impartir = require('../../assets/impartir.png')
+const logo = require('../../assets/Logoprincipal.png')
+const x_icon = require('../../assets/x.png')
 
 export function CatalogoPage() {
     return (
         <View className="flex-1">
+            <View className=" flex-1">
+                <Image source={barra1} className="w-full rounded mb-20" />
+                <Image source={barra2} className="w-full rounded mt-96" />
+            </View>
             <ScrollView >
-                <Text className="text-center mt-4 text-2xl mx-5">¡Elige tu mejor modalidad, en línea o a domicilio!</Text>
+                <Text className="text-center text-2xl mx-5 mt-32">¡Elige tu mejor modalidad, en línea o a domicilio!</Text>
                 <View className="flex-row justify-center mt-3">
                     <Image source={mundo} className="mr-5" />
                     <Image source={casa} />
@@ -83,8 +90,15 @@ export function CatalogoPage() {
                 </View>
 
             </ScrollView>
-
-            <Navegacion />
+            <View className="w-full flex-row justify-between items-center px-3 absolute mt-5">
+                <Image source={logo} style={{ width: 80, height: 60 }} />
+                <Text className="text-white text-2xl">Actualizar Perfil</Text>
+                <Link href={'/docente/inicio'}>
+                    <View className="">
+                        <Image source={x_icon} />
+                    </View>
+                </Link>
+            </View>
 
         </View>
 

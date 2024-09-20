@@ -3,15 +3,14 @@ import { View, Image, ScrollView, Text } from "react-native";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 const barra1 = require('../../assets/fondoPantalla.png')
 const barra2 = require('../../assets/barra2.png')
-
 const logo = require('../../assets/Logoprincipal.png')
-const iconoPerfilUsuario = require('../../assets/iconoPerfilUsuario.png')
+const iconoPerfilUsuario = require('../../assets/conodelestudiantefinal.png')
 
 //iconos de lista
 const vector = require('../../assets/perfil/Vector.png')
 const uno = require('../../assets/perfil/uno.png')
 const dos = require('../../assets/perfil/dos.png')
-const tres = require('../../assets/perfil/tres.png')
+const tres = require('../../assets/perfil/Certificados.png')
 const cuatro = require('../../assets/perfil/cuatro.png')
 const cinco = require('../../assets/perfil/cinco.png')
 const seis = require('../../assets/perfil/seis.png')
@@ -22,7 +21,7 @@ const diez = require('../../assets/perfil/diez.png')
 const cerrarsession = require('../../assets/perfil/cerrarsession.png')
 
 
-export function PerfilPage() {
+export function PerfilStudentPage() {
     return (
         <View className="flex-1">
             <View className=" flex-1">
@@ -35,10 +34,10 @@ export function PerfilPage() {
                 </View>
                 <View className="items-center mt-6">
                     <Image source={iconoPerfilUsuario} />
-                    <Text className="text-2xl mt-1">Pedro Jóse González Ruiz profe</Text>
+                    <Text className="text-2xl mt-1">Pedro Jóse González Ruiz</Text>
                 </View>
                 <View className="mt-8">
-                    <Link href={'/docente/actualizar-perfil'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/estudiante/actualizar-perfil'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={uno} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -61,8 +60,8 @@ export function PerfilPage() {
                     <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={tres} resizeMethod="contain" style={{ height: 40, width:40 }} />
-                                <Text className="text-lg ml-4">Mis recursos</Text>
+                                <Image source={cuatro} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Text className="text-lg ml-4">Mis pruebas</Text>
                             </View>
                             <Image source={vector} />
                         </View>
@@ -71,8 +70,8 @@ export function PerfilPage() {
                     <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={cuatro} resizeMethod="contain" style={{ height: 40, width:40 }} />
-                                <Text className="text-lg ml-4">Mis pruebas</Text>
+                                <Image source={tres} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Text className="text-lg ml-4">Mis certificados</Text>
                             </View>
                             <Image source={vector} />
                         </View>
@@ -154,7 +153,5 @@ export function PerfilPage() {
             </ScrollView>
 
         </View>
-
-
     );
 }

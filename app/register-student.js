@@ -1,5 +1,11 @@
 import { RegisterStudentPage } from "../pages/register/register-student";
+import { PaginaPadin } from "../pages/layout/paginas";
 
 export default function RegisterStudent() {
-    return <RegisterStudentPage />
+    return (
+        <PaginaPadin>
+            <RegisterStudentPage />
+        </PaginaPadin>
+    )
+
 }

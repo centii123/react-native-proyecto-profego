@@ -1,5 +1,11 @@
 import { LoginTeacherPage } from "../pages/login/login-teacher";
+import { PaginaPadin } from "../pages/layout/paginas";
 
 export default function LoginTeacher() {
-    return <LoginTeacherPage />
+    return (
+        <PaginaPadin>
+            <LoginTeacherPage />
+        </PaginaPadin>
+    )
+     
 }

@@ -1,6 +1,5 @@
 import { Link } from "expo-router"
 import { View, Image, Text, ScrollView } from "react-native";
-import { Navegacion } from "../layouts/navegacion";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 const study = require('../../assets/study.png')
 const barra1 = require('../../assets/fondo2.png')
@@ -92,8 +91,6 @@ export function InicioStudentPage() {
             <View className="w-full flex-row justify-center items-center px-3 absolute mt-5">
                 <Image source={logo} className="mr-3" style={{ width: 90, height: 60 }} />
             </View>
-
-            <Navegacion />
 
         </View>
 
