@@ -89,7 +89,7 @@ export function PerfilStudentPage() {
 
                     <Text className="mt-5 ml-5 text-3xl">Soporte</Text>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/quienes-somos'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={seis} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -99,7 +99,7 @@ export function PerfilStudentPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/como-funciona'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={siete} resizeMethod="contain" style={{ height: 35, width:40 }} />
@@ -109,7 +109,7 @@ export function PerfilStudentPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/nuestra-seguridad'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={ocho} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -119,7 +119,7 @@ export function PerfilStudentPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/testimonios'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={nueve} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -129,7 +129,7 @@ export function PerfilStudentPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/centro-ayuda'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-96 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={diez} resizeMethod="contain" style={{ height: 40, width:40 }} />
