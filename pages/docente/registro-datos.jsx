@@ -81,19 +81,19 @@ export function RegisterDatosTeacherPage() {
                         </TouchableHighlight>
                     </View>
                     <View className="mt-3">
-                        <Text className="text-lg text-start mb-2 text-green-900">Nombre completo</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <Text className="text-lg text-start mb-2 text-green-900">Nombre completos</Text>
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>
                     <View className="mt-3 flex-row">
                         <View className="mr-6">
                             <Text className="text-lg text-start mb-2 text-green-900">Tipo de usuario</Text>
-                            <View className="w-60 py-1 border-orange-500 border-4 rounded-2xl">
+                            <View className="w-48  border-orange-500 border-4 rounded-2xl">
                                 <Picker
                                     selectedValue={selectedValue}
                                     style={{
-                                        width: 230,
+                                        width: 185,
                                     }}
                                     onValueChange={(itemValue) => setSelectedValue(itemValue)}
                                 >
@@ -106,7 +106,7 @@ export function RegisterDatosTeacherPage() {
                         </View>
                         <View>
                             <Text className="text-lg text-start mb-2 text-green-900">Edad</Text>
-                            <View className="w-28 py-4 px-3 border-orange-500 border-4 rounded-2xl">
+                            <View className="w-24 py-3 px-3 border-orange-500 border-4 rounded-2xl">
                                 <TextInput />
                             </View>
                         </View>
@@ -117,7 +117,7 @@ export function RegisterDatosTeacherPage() {
 
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Nombre del título o especialidad</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>
@@ -129,55 +129,55 @@ export function RegisterDatosTeacherPage() {
                     </View>
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Documentación requerida</Text>
-                        <View className="flex-row w-96 justify-between items-center">
-                            <Text className="w-28 text-center">Título profesional y/o certificados de aval de enseñanza</Text>
-                            <Text className="w-28 text-center">Hoja de vida actualizada</Text>
-                            <Text className="w-28 text-center">Certificado de Antecedentes Penales</Text>
+                        <View className="flex-row w-80 justify-between items-center">
+                            <Text className="w-20 text-center">Título profesional y/o certificados de aval de enseñanza</Text>
+                            <Text className="w-20 text-center">Hoja de vida actualizada</Text>
+                            <Text className="w-20 text-center">Certificado de Antecedentes Penales</Text>
                         </View>
-                        <View className="flex-row w-96 justify-between">
-                            <View className="relative w-28 h-36">
+                        <View className="flex-row w-80 justify-between mt-2">
+                            <View className="relative w-20 h-28">
 
                                 {docOne ? (
                                     <Image source={{ uri: docTwo }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
                                 ) : (
-                                    <View className="w-28 h-36 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-20 h-20" resizeMode="contain" />
+                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
                                     </View>
 
                                 )}
 
-                                <TouchableHighlight onPress={() => PdfLoad(1)} className="absolute flex justify-center items-center w-28 h-36">
-                                    <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
+                                <TouchableHighlight onPress={() => PdfLoad(1)} className="absolute flex justify-center items-center w-20 h-28">
+                                    <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
-                            <View className="relative w-28 h-36">
+                            <View className="relative w-20 h-28">
 
                                 {docTwo ? (
                                     <Image source={{ uri: docTwo }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
                                 ) : (
-                                    <View className="w-28 h-36 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-20 h-20" resizeMode="contain" />
+                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
                                     </View>
 
                                 )}
 
-                                <TouchableHighlight onPress={() => PdfLoad(2)} className="absolute flex justify-center items-center w-28 h-36">
-                                    <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
+                                <TouchableHighlight onPress={() => PdfLoad(2)} className="absolute flex justify-center items-center w-20 h-28">
+                                    <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
-                            <View className="relative w-28 h-36">
+                            <View className="relative w-20 h-28">
 
                                 {docTree ? (
                                     <Image source={{ uri: docTree }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
                                 ) : (
-                                    <View className="w-28 h-36 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-20 h-20" resizeMode="contain" />
+                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
                                     </View>
 
                                 )}
 
-                                <TouchableHighlight onPress={() => PdfLoad(3)} className="absolute flex justify-center items-center w-28 h-36">
-                                    <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
+                                <TouchableHighlight onPress={() => PdfLoad(3)} className="absolute flex justify-center items-center w-20 h-28">
+                                    <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
                         </View>
@@ -185,20 +185,20 @@ export function RegisterDatosTeacherPage() {
                     </View>
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Áreas/ asignaturas a enseñar</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Rango de edad de enseñanza</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>
 
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Descripción</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput
                                 multiline
                                 numberOfLines={4}
@@ -209,27 +209,27 @@ export function RegisterDatosTeacherPage() {
                     </View>
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Correo electrónico</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>
                     <View className="mt-2 flex-row">
                         <View className="mr-6">
                             <Text className="text-lg text-start mb-2 text-green-900">Cédula</Text>
-                            <View className="w-44 py-3 px-2 border-orange-500 border-4 rounded-2xl">
+                            <View className="w-36 py-2 px-2 border-orange-500 border-4 rounded-2xl">
                                 <TextInput />
                             </View>
                         </View>
                         <View>
                             <Text className="text-lg text-start mb-2 text-green-900">Celular</Text>
-                            <View className="w-44 py-3 px-2 border-orange-500 border-4 rounded-2xl">
+                            <View className="w-36 py-2 px-2 border-orange-500 border-4 rounded-2xl">
                                 <TextInput />
                             </View>
                         </View>
                     </View>
                     <View className="mt-2">
                         <Text className="text-lg text-start mb-2 text-green-900">Contraseña</Text>
-                        <View className="w-96 py-3 px-6 border-orange-500 border-4 rounded-2xl">
+                        <View className="w-80 py-2 px-6 border-orange-500 border-4 rounded-2xl">
                             <TextInput />
                         </View>
                     </View>

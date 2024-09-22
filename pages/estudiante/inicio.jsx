@@ -28,12 +28,14 @@ export function InicioStudentPage() {
                 <Image source={barra1} className="w-full rounded mb-20" />
             </View>
             <ScrollView >
-
+                <View className="w-full flex-row justify-center items-center px-3 absolute mt-5">
+                    <Image source={logo} className="mr-3" style={{ width: 90, height: 60 }} />
+                </View>
                 <View className="flex-1 mt-24">
                     <Image source={study} className="w-full rounded" />
                     <Text className="text-center text-orange-500 text-3xl mt-5">¡Bienvenido José Pérez!</Text>
                     <View className="flex-row justify-around items-center mt-2">
-                        <Text className="w-52 ml-10 mr-0 text-base">Elige el servicio que más se adapte a tus necesidades</Text>
+                        <Text className="w-44 ml-10 mr-0 text-base">Elige el servicio que más se adapte a tus necesidades</Text>
                         <Image source={boys} />
                     </View>
                 </View>
@@ -46,22 +48,22 @@ export function InicioStudentPage() {
                 </View>
                 <Text className=" text-lg ml-6 mt-4">¿Qué encontrarás?</Text>
                 <View className="flex-row items-center ml-5 mt-3">
-                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
-                        <Image source={íconodeclasesparticulares} style={{ width: 80, height: 70 }} />
+                    <View className="bg-orange-500 p-4 items-center rounded-2xl mr-5">
+                        <Image source={íconodeclasesparticulares} />
                     </View>
-                    <Text className="text-xl w-60">Clases particulares</Text>
+                    <Text className="text-xl w-52">Clases particulares</Text>
                 </View>
                 <View className="flex-row items-center ml-5 mt-3">
-                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
-                        <Image source={clasesGrupales} style={{ width: 80, height: 70 }} />
+                    <View className="bg-orange-500 p-4 items-center rounded-2xl mr-5">
+                        <Image source={clasesGrupales} />
                     </View>
-                    <Text className="text-xl w-60">Clases grupales</Text>
+                    <Text className="text-xl w-52">Clases grupales</Text>
                 </View>
                 <View className="flex-row items-center ml-5 mt-3">
-                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
-                        <Image source={couchingVirtual} style={{ width: 80, height: 70 }} />
+                    <View className="bg-orange-500 p-4 items-center rounded-2xl mr-5">
+                        <Image source={couchingVirtual} />
                     </View>
-                    <Text className="text-xl w-60">Coaching individual para docentes</Text>
+                    <Text className="text-xl w-52">Coaching individual para docentes</Text>
                 </View>
 
                 <View className="items-center">
@@ -73,24 +75,22 @@ export function InicioStudentPage() {
                 </View>
                 <Text className=" text-lg ml-6 mt-4">¿Qué encontrarás?</Text>
                 <View className="flex-row items-center ml-5 mt-3">
-                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
-                        <Image source={cursos} style={{ width: 80, height: 70 }} />
+                    <View className="bg-orange-500 p-4 items-center rounded-2xl mr-5">
+                        <Image source={cursos} />
                     </View>
-                    <Text className="text-xl w-60">Cursos</Text>
+                    <Text className="text-xl w-52">Cursos</Text>
                 </View>
-                <View className="flex-row items-center ml-5 mt-3 mb-40">
-                    <View className="bg-orange-500 w-32 p-3 items-center rounded-2xl mr-5">
-                        <Image source={docentes} style={{ width: 80, height: 70 }} />
+                <View className="flex-row items-center ml-5 mt-3 mb-12">
+                    <View className="bg-orange-500  p-4 items-center rounded-2xl mr-5">
+                        <Image source={docentes} />
                     </View>
-                    <Text className="text-xl w-60">Coaching para docentes</Text>
+                    <Text className="text-xl w-52">Coaching para docentes</Text>
                 </View>
 
 
             </ScrollView>
 
-            <View className="w-full flex-row justify-center items-center px-3 absolute mt-5">
-                <Image source={logo} className="mr-3" style={{ width: 90, height: 60 }} />
-            </View>
+
 
         </View>
 

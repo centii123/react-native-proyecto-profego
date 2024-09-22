@@ -27,7 +27,7 @@ export function CatalogoPage() {
                 <Text className="text-center text-2xl mt-8 text-orange-500">Catálogo de servicios existentes</Text>
                 <Text className="mt-1 mx-7 text-center">¿Te gustaría impartir alguno de los servicios creados por el equipo de ProfeGo? Explora y selecciona los mejores programas para ti o crea los tuyos propios.</Text>
                 <View className="mb-36 mt-2">
-                    <View className="items-center mt-12">
+                    <View className="items-center mt-10">
                         <Video
                             source={{ uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }} // URL del video
                             style={{
@@ -38,7 +38,7 @@ export function CatalogoPage() {
                             resizeMode="contain" // Ajusta el tamaño del video dentro del contenedor
                             isLooping // Hace que el video se reproduzca en bucle
                         />
-                        <View className="bg-teal-900 w-96 p-4 rounded-xl mt-2 pr-0">
+                        <View className="bg-teal-900 w-80 p-4 rounded-xl mt-2 pr-0">
                             <Text className="text-white text-base">Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas</Text>
                             <Text className="text-slate-300 text-xs my-2">Por Pedro González</Text>
                             <View className="flex-row items-center">
@@ -69,7 +69,7 @@ export function CatalogoPage() {
                             resizeMode="contain" // Ajusta el tamaño del video dentro del contenedor
                             isLooping // Hace que el video se reproduzca en bucle
                         />
-                        <View className="bg-teal-900 w-96 p-4 rounded-xl mt-2 pr-0">
+                        <View className="bg-teal-900 w-80 p-4 rounded-xl mt-2 pr-0">
                             <Text className="text-white text-base">Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas</Text>
                             <Text className="text-slate-300 text-xs my-2">Por Pedro González</Text>
                             <View className="flex-row items-center">
@@ -92,7 +92,7 @@ export function CatalogoPage() {
             </ScrollView>
             <View className="w-full flex-row justify-between items-center px-3 absolute mt-5">
                 <Image source={logo} style={{ width: 80, height: 60 }} />
-                <Text className="text-white text-2xl">Actualizar Perfil</Text>
+                <Text className="text-white text-2xl">Catalogo</Text>
                 <Link href={'/docente/inicio'}>
                     <View className="">
                         <Image source={x_icon} />
