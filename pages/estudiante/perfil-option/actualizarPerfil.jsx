@@ -47,7 +47,7 @@ export function ActualizarPerfilStudentPage() {
 
                         )}
 
-                        <TouchableHighlight onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
+                        <TouchableHighlight underlayColor={'#F29224'} onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
                             <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
                         </TouchableHighlight>
                     </View>
@@ -106,8 +106,8 @@ export function ActualizarPerfilStudentPage() {
                 </View>
 
             </ScrollView>
-            <View className="w-full flex-row justify-between items-center px-3 absolute mt-5">
-                <Image source={logo} style={{ width: 80, height: 60 }} />
+            <View className="w-full flex-row justify-between items-center px-3 absolute py-3 bg-orange-400">
+                <Image source={logo} style={{ width: 52, height: 40 }} />
                 <Text className="text-white text-2xl">Actualizar Perfil</Text>
                 <Link href={'/docente/perfil'}>
                     <View className="">

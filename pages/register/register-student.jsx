@@ -58,7 +58,7 @@ export function RegisterStudentPage() {
                             
                         )}
                         
-                        <TouchableHighlight onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
+                        <TouchableHighlight underlayColor={'#F29224'} onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
                             <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
                         </TouchableHighlight>
                     </View>

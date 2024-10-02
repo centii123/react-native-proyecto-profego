@@ -13,12 +13,6 @@ const couchingVirtual = require('../../assets/couchingVirtual.png')
 const cursos = require('../../assets/cursos.png')
 const docentes = require('../../assets/docentes.png')
 
-//navegacion
-const navegacion1 = require('../../assets/navegacion1.png')
-const navegacion2 = require('../../assets/navegacion2.png')
-const navegacion3 = require('../../assets/navegacion3.png')
-const navegacion4 = require('../../assets/navegacion4.png')
-
 //loadImg
 
 export function InicioStudentPage() {
@@ -40,7 +34,7 @@ export function InicioStudentPage() {
                     </View>
                 </View>
                 <View className="items-center">
-                    <Link href={'/estudiante/inicio'} className="py-3 mt-4 w-96 rounded-2xl justify-center items-center bg-teal-800 text-center">
+                    <Link href={'/docente/catalogo'} className="py-3 mt-4 w-96 rounded-2xl justify-center items-center bg-teal-800 text-center">
                         <Text className="text-white text-2xl p-10">
                             Clases
                         </Text>

@@ -1,33 +1,36 @@
-import { Link } from "expo-router"
-import { View, Image, Text, ScrollView } from "react-native";
+
+import { View, Image, ScrollView } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+import HeaderComponent from "../components/header";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 const barra1 = require('../../assets/fondoPantalla.png')
 const barra2 = require('../../assets/barra2.png')
-const logo = require('../../assets/Logoprincipal.png')
-const x_icon = require('../../assets/x.png')
-
-
+const elegir = require('../../assets/quienesSomos/elegir.png')
+const visionMision = require('../../assets/quienesSomos/visionMision.png')
+const valores = require('../../assets/quienesSomos/valores.png')
+const historia = require('../../assets/quienesSomos/historia.png')
+const QuienesSomos = require('../../assets/quienesSomos/QuienesSomos.png')
 
 export function QuienesSomosPage() {
     return (
         <View className="flex-1">
             <View className=" flex-1">
                 <Image source={barra1} className="w-full rounded mb-20" />
-                <Image source={barra2} className="w-full rounded mt-96" />
+                <Image source={barra2} className="w-full rounded mt-60" />
             </View>
-            <ScrollView > 
-        
+            <ScrollView className="min-h-screen">
+               
+            <Image source={QuienesSomos} style={{width:"100%", height: 200}} resizeMode="contain" className="mt-16" />
+            <Image source={visionMision} style={{width:"100%", height: 280}} resizeMode="contain" />
+            <Image source={historia} style={{width:"100%", height: 230}} resizeMode="contain" className="mt-4" />
+            <Image source={valores} style={{width:"100%", height: 260}} resizeMode="contain" />
+            <Image source={elegir} style={{width:"100%", height: 280}} resizeMode="contain" />
+
+            <View className="mb-8"></View>
 
             </ScrollView>
-            <View className="w-full flex-row justify-between items-center px-3 absolute mt-5">
-                <Image source={logo} style={{ width: 80, height: 60 }} />
-                <Text className="text-white text-2xl">¿Quiénes Somos?</Text>
-                <Link href={'/docente/perfil'}>
-                    <View className="">
-                        <Image source={x_icon} />
-                    </View>
-                </Link>
-            </View>
+
+            <HeaderComponent nombre={'¿Quiénes Somos?'} />
         </View>
     );
 }

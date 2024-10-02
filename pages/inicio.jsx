@@ -11,8 +11,8 @@ export function InicioPage() {
                 <Image source={inicioImg} className="w-full rounded" />
                 <Image source={logo} className="absolute mx-60" style={{ top: 255 }} />
                 <View className="justify-center items-center">
-                    <Text className="w-60 text-orange-500 text-4xl text-center">Bienvenido a ProfeGo</Text>
-                    <Text className="text-green-950 text-2xl my-8">¡Apende hoy, lidera mañana!</Text>
+                    <Text className="mt-3 text-orange-500 text-3xl text-center">Bienvenido a ProfeGo</Text>
+                    <Text className="text-green-950 text-2xl my-8 mt-5">¡Apende hoy, lidera mañana!</Text>
                     <Link href={'/login-student'} className="py-3 w-72 rounded-2xl justify-center items-center bg-orange-500 text-center">
                         <Text className="text-white text-2xl p-10">
                             Iniciar sesión

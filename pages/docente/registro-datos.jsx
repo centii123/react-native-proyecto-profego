@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "expo-router"
 import { View, Image, Text, TextInput, ScrollView, TouchableHighlight } from "react-native";
 import * as DocumentPicker from "expo-document-picker"
@@ -40,11 +40,11 @@ export function RegisterDatosTeacherPage() {
                 type: 'application/pdf',
             });
             if (num == 1) {
-                setDocOne(docRes.assets[0].uri)
+                setDocOne(docRes.assets[0]['name'])
             } else if (num == 2) {
-                setDocTwo(docRes.assets[0].uri)
+                setDocTwo(docRes.assets[0]['name'])
             } else if (num == 3) {
-                setDocTree(docRes.assets[0].uri)
+                setDocTree(docRes.assets[0]['name'])
             } else {
                 console.log('incorrecto')
             }
@@ -76,7 +76,7 @@ export function RegisterDatosTeacherPage() {
 
                         )}
 
-                        <TouchableHighlight onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
+                        <TouchableHighlight underlayColor={'#F29224'} onPress={ImgLoad} className="absolute flex justify-center items-center w-36 h-36">
                             <Image source={load_img} className="w-16 h-16" resizeMode="contain" />
                         </TouchableHighlight>
                     </View>
@@ -136,50 +136,59 @@ export function RegisterDatosTeacherPage() {
                         </View>
                         <View className="flex-row w-80 justify-between mt-2">
                             <View className="relative w-20 h-28">
+                                <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                    <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
+                                </View>
 
-                                {docOne ? (
-                                    <Image source={{ uri: docTwo }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
-                                ) : (
-                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
-                                    </View>
-
-                                )}
-
-                                <TouchableHighlight onPress={() => PdfLoad(1)} className="absolute flex justify-center items-center w-20 h-28">
+                                <TouchableHighlight underlayColor={'#F29224'} onPress={() => PdfLoad(1)} className="absolute flex justify-center items-center w-20 h-28">
                                     <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
                             <View className="relative w-20 h-28">
 
-                                {docTwo ? (
-                                    <Image source={{ uri: docTwo }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
-                                ) : (
-                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
-                                    </View>
 
-                                )}
+                                <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                    <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
+                                </View>
 
-                                <TouchableHighlight onPress={() => PdfLoad(2)} className="absolute flex justify-center items-center w-20 h-28">
+                                <TouchableHighlight underlayColor={'#F29224'} onPress={() => PdfLoad(2)} className="absolute flex justify-center items-center w-20 h-28">
                                     <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
                             <View className="relative w-20 h-28">
+                                <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
+                                    <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
+                                </View>
 
-                                {docTree ? (
-                                    <Image source={{ uri: docTree }} style={{ width: 150, height: 150 }} resizeMode="cover" /> // Mostrar la imagen seleccionada
-                                ) : (
-                                    <View className="w-20 h-28 border-orange-500 border-4 rounded-2xl items-center justify-center">
-                                        <Image source={documentosadd} className="w-12 h-20" resizeMode="contain" />
-                                    </View>
-
-                                )}
-
-                                <TouchableHighlight onPress={() => PdfLoad(3)} className="absolute flex justify-center items-center w-20 h-28">
+                                <TouchableHighlight underlayColor={'#F29224'} onPress={() => PdfLoad(3)} className="absolute flex justify-center items-center w-20 h-28">
                                     <Image source={load_img} className="w-10 h-16" resizeMode="contain" />
                                 </TouchableHighlight>
                             </View>
+                        </View>
+                        <View className="flex-row w-80 justify-between items-center">
+
+                            <Text className="w-20 text-center text-green-700" style={{ fontSize: 10 }}>
+                                {docOne ?
+                                    `${docOne.slice(0, 30)}...`
+                                    : (
+                                        ''
+                                    )}
+                            </Text>
+                            <Text className="w-20 text-center text-green-700" style={{ fontSize: 10 }}>
+                                {docTwo ?
+                                    `${docTwo.slice(0, 30)}...`
+                                    : (
+                                        ''
+                                    )}
+
+                            </Text>
+                            <Text className="w-20 text-center text-green-700" style={{ fontSize: 10 }}>
+                                {docTree ?
+                                    `${docTree.slice(0, 30)}...`
+                                    : (
+                                        ''
+                                    )}
+                            </Text>
                         </View>
                         <Text className=" text-blue-600 text-center mt-1">Sube tus archivos en formato .pdf  (Recomendado)</Text>
                     </View>
@@ -238,10 +247,7 @@ export function RegisterDatosTeacherPage() {
                             Guardar y enviar
                         </Text>
                     </Link>
-
-
                 </View>
-
             </ScrollView>
 
 

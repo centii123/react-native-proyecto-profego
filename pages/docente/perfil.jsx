@@ -38,7 +38,7 @@ export function PerfilPage() {
                     <Text className="text-2xl mt-1">Pedro Jóse González Ruiz profe</Text>
                 </View>
                 <View className="mt-8">
-                    <Link href={'/docente/actualizar-perfil'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/docente/actualizar-perfil'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={uno} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -48,17 +48,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
-                            <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={dos} resizeMethod="contain" style={{ height: 40, width:40 }} />
-                                <Text className="text-lg ml-4">Mis tareas o proyectos</Text>
-                            </View>
-                            <Image source={vector} />
-                        </View>
-                    </Link>
-
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/docente/misRecursos'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={tres} resizeMethod="contain" style={{ height: 40, width:40 }} />
@@ -68,7 +58,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/misPruebas'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={cuatro} resizeMethod="contain" style={{ height: 40, width:40 }} />
@@ -78,7 +68,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/misFacturas'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={cinco} resizeMethod="contain" style={{ height: 40, width:40 }} />
@@ -90,7 +80,7 @@ export function PerfilPage() {
 
                     <Text className="mt-5 ml-5 text-3xl">Soporte</Text>
 
-                    <Link href={'/global/quienes-somos'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/quienes-somos'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={seis} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -100,7 +90,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/global/como-funciona'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/como-funciona'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={siete} resizeMethod="contain" style={{ height: 35, width:40 }} />
@@ -110,7 +100,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/global/nuestra-seguridad'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/nuestra-seguridad'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={ocho} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -120,7 +110,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/global/testimonios'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/testimonios'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={nueve} resizeMethod="contain" style={{ height: 45, width:40 }} />
@@ -130,7 +120,7 @@ export function PerfilPage() {
                         </View>
                     </Link>
 
-                    <Link href={'/global/centro-ayuda'} className=" border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
+                    <Link href={'/global/centro-ayuda'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
                         <View className="mx-5 flex-row justify-around items-center w-80 ">
                             <View className="flex-row items-center" style={{ width: 250 }}>
                                 <Image source={diez} resizeMethod="contain" style={{ height: 40, width:40 }} />
@@ -140,8 +130,8 @@ export function PerfilPage() {
                         </View>
                     </Link>
                 </View>
-                <View className="mt-8 mb-80 items-center justify-center">
-                    <Link href={'/'} className="mt-10 py-6 px-9 mb-48 rounded-2xl bg-blue-600 text-center">
+                <View className="mt-8 mb-20 items-center justify-center">
+                    <Link href={'/'} className="mt-10 py-6 px-9 rounded-2xl bg-blue-600 text-center">
                         <View className="justify-center items-center flex-row">
                             <Text className="pr-5 text-white text-2xl" >
                                 Cerrar sesión

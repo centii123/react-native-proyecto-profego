@@ -1,33 +1,26 @@
-import { Link } from "expo-router"
-import { View, Image, Text, ScrollView } from "react-native";
+
+import { View, Image, ScrollView } from "react-native";
+import HeaderComponent from "../components/header";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
-const barra1 = require('../../assets/fondoPantalla.png')
-const barra2 = require('../../assets/barra2.png')
-const logo = require('../../assets/Logoprincipal.png')
-const x_icon = require('../../assets/x.png')
-
-
+const titulo = require('../../assets/comoFunciona/titulo.png')
+const estudiante = require('../../assets/comoFunciona/estudiante.png')
+const docente =require('../../assets/comoFunciona/docente.png')
+const calificacion =require('../../assets/comoFunciona/calificacion.png')
+const calificacionOpciones =require('../../assets/comoFunciona/calificacionOpciones.png')
 
 export function ComoFuncionaPage() {
     return (
         <View className="flex-1">
-            <View className=" flex-1">
-                <Image source={barra1} className="w-full rounded mb-20" />
-                <Image source={barra2} className="w-full rounded mt-96" />
-            </View>
-            <ScrollView > 
-        
-
+            
+            <ScrollView className="min-h-screen">
+                <Image source={titulo} style={{ width: "100%", height: 50 }} resizeMode="contain"  className="mt-20" />
+                <Image source={estudiante} style={{ width: "100%", height: 350 }} resizeMode="contain" />
+                <Image source={docente} style={{ width: "100%", height: 500 }} resizeMode="contain" />
+                <Image source={calificacion} style={{ width: "100%", height: 130 }} resizeMode="contain" />
+                <Image source={calificacionOpciones} style={{ width: "100%", height: 200 }} resizeMode="contain" className="mb-10"/>
             </ScrollView>
-            <View className="w-full flex-row justify-between items-center px-3 absolute mt-5">
-                <Image source={logo} style={{ width: 80, height: 60 }} />
-                <Text className="text-white text-2xl">¿Como Funciona?</Text>
-                <Link href={'/docente/perfil'}>
-                    <View className="">
-                        <Image source={x_icon} />
-                    </View>
-                </Link>
-            </View>
+            <HeaderComponent nombre={'¿Como Funciona?'} />
+            
         </View>
     );
 }
