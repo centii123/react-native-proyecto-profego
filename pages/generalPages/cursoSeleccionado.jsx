@@ -1,6 +1,6 @@
 import { Link } from "expo-router"
 import { useState } from "react";
-import { View, Text, ScrollView, TouchableHighlight, Image } from "react-native";
+import { View, Text, ScrollView, TouchableHighlight, Image, Dimensions } from "react-native";
 import HeaderComponent from "../components/header";
 import { Picker } from '@react-native-picker/picker';
 import BuscadorComponent from "../components/buscador";
@@ -8,6 +8,7 @@ import BuscadorComponent from "../components/buscador";
 //imagenes
 const tareas = require('../../assets/tareas.png')
 export function CursosPage() {
+    const anchuraPantalla=Dimensions.get('window').width;
     const [tarea, setTarea] = useState(true);
     const [asistencia, setAsistencia] = useState(false);
 
@@ -130,13 +131,14 @@ export function CursosPage() {
                 <Text className="text-white text-3xl">+</Text>
             </TouchableHighlight>
 
+
             <ScrollView className={`${tarea == true ? '' : 'hidden'}`}>
                 <BuscadorComponent className="mt-0" />
                 <View className="mb-14 ">
 
                     <View className="items-center mt-2">
                         <Link href={'/global/tareas'} children>
-                            <View className="bg-white shadow-lg rounded-lg w-80 p-4 pr-0 border-2 border-orange-500">
+                            <View className="bg-white shadow-lg rounded-lg p-4 pr-0 border-2 border-orange-500" style={{width: anchuraPantalla * 0.80}}>
                                 <Text className="text-blue-700 text-base font-bold">{'Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas'.slice(0, 70)}...</Text>
                                 <View className="flex-row items-center mt-2">
                                     <Image source={tareas} className=" mr-3" style={{ width: 40, height: 40 }} />
@@ -155,7 +157,7 @@ export function CursosPage() {
                     
                     <View className="items-center mt-2">
                         <Link href={'/global/tareas'} children>
-                            <View className="bg-white shadow-lg rounded-lg w-80 p-4 pr-0 border-2 border-orange-500">
+                            <View className="bg-white shadow-lg rounded-lg p-4 pr-0 border-2 border-orange-500" style={{width: anchuraPantalla * 0.80}}>
                                 <Text className="text-blue-700 text-base font-bold">{'Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas'.slice(0, 70)}...</Text>
                                 <View className="flex-row items-center mt-2">
                                     <Image source={tareas} className=" mr-3" style={{ width: 40, height: 40 }} />
@@ -173,6 +175,12 @@ export function CursosPage() {
                     </View>
                 </View>
             </ScrollView>
+
+            <TouchableHighlight
+                onPress={() => { alert('hola profesor') }}
+                className={`${tarea == true ? '' : 'hidden'} absolute top-3/4 bg-orange-600 px-5 py-3 rounded-full mt-14 mr-16`} style={{ left: '80%' }}>
+                <Text className="text-white text-3xl">+</Text>
+            </TouchableHighlight>
             <HeaderComponent nombre={'Curso'} />
 
         </View>

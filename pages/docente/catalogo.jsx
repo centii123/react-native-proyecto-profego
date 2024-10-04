@@ -1,6 +1,6 @@
 import { Link } from "expo-router"
 
-import { View, Image, Text, ScrollView } from "react-native";
+import { View, Image, Text, ScrollView, Dimensions } from "react-native";
 import { Video } from 'expo-av';
 import HeaderComponent from "../components/header";
 import BuscadorComponent from "../components/buscador";
@@ -13,7 +13,7 @@ const casa = require('../../assets/casa.png')
 
 
 export function CatalogoPage() {
-
+    const anchuraPantalla=Dimensions.get('window').width;
     return (
         <View className="flex-1">
             <View className=" flex-1">
@@ -44,8 +44,8 @@ export function CatalogoPage() {
                             resizeMode="contain" // Ajusta el tamaño del video dentro del contenedor
                             isLooping // Hace que el video se reproduzca en bucle
                         />
-                        <Link href={'/global/cursos'} children>
-                            <View className="bg-teal-900 w-80 p-4 rounded-xl pr-0 " >
+                        <Link href={'/global/cursos'} children className="mt-2">
+                            <View className="bg-teal-900 p-4 rounded-xl" style={{width:anchuraPantalla * 0.90}}>
                                 <Text className="text-white text-base">Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas</Text>
                                 <Text className="text-slate-300 text-xs my-2">Por Pedro González</Text>
                                 <View className="flex-row items-center">
@@ -69,8 +69,8 @@ export function CatalogoPage() {
                             resizeMode="contain" // Ajusta el tamaño del video dentro del contenedor
                             isLooping // Hace que el video se reproduzca en bucle
                         />
-                        <Link href={'/global/cursos'} children>
-                            <View className="bg-teal-900 w-80 p-4 rounded-xl pr-0 " >
+                        <Link href={'/global/cursos'} children className="mt-2">
+                            <View className="bg-teal-900 p-4 rounded-xl" style={{width:anchuraPantalla * 0.90}}>
                                 <Text className="text-white text-base">Introducción a la Inteligencia Artificial: Fundamentos y Aplicaciones Prácticas</Text>
                                 <Text className="text-slate-300 text-xs my-2">Por Pedro González</Text>
                                 <View className="flex-row items-center">

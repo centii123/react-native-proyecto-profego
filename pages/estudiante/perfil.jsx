@@ -1,5 +1,5 @@
 import { Link } from "expo-router"
-import { View, Image, ScrollView, Text } from "react-native";
+import { View, Image, ScrollView, Text, Dimensions  } from "react-native";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 const barra1 = require('../../assets/fondoPantalla.png')
 const barra2 = require('../../assets/barra2.png')
@@ -22,6 +22,7 @@ const cerrarsession = require('../../assets/perfil/cerrarsession.png')
 
 
 export function PerfilStudentPage() {
+    const containerWidth  = Dimensions.get('window').width * 0.90; 
     return (
         <View className="flex-1">
             <View className=" flex-1">
@@ -38,9 +39,9 @@ export function PerfilStudentPage() {
                 </View>
                 <View className="mt-8">
                     <Link href={'/estudiante/actualizar-perfil'} className=" border-orange-500 bg-slate-100 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center  " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={uno} resizeMethod="contain" style={{ height: 45, width:40 }} />
+                                <Image source={uno} resizeMethod="contain" style={{ height: 45, width: 40 }} />
                                 <Text className="text-lg ml-4">Actualizar perfil</Text>
                             </View>
                             <Image source={vector} />
@@ -48,19 +49,21 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/estudiante/misTareas'} className=" border-orange-500 bg-slate-100 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center  " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={dos} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Image source={dos} resizeMethod="contain" style={{ height: 45, width: 40 }} />
                                 <Text className="text-lg ml-4">Mis tareas o proyectos</Text>
                             </View>
                             <Image source={vector} />
                         </View>
                     </Link>
 
+                    
+
                     <Link href={'/global/misPruebas'} className=" border-orange-500 bg-slate-100 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={cuatro} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Image source={cuatro} resizeMethod="contain" style={{ height: 40, width: 40 }} />
                                 <Text className="text-lg ml-4">Mis pruebas</Text>
                             </View>
                             <Image source={vector} />
@@ -68,9 +71,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/estudiante/misCertificados'} className=" border-orange-500 bg-slate-100 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={tres} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Image source={tres} resizeMethod="contain" style={{ height: 40, width: 40 }} />
                                 <Text className="text-lg ml-4">Mis certificados</Text>
                             </View>
                             <Image source={vector} />
@@ -78,9 +81,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/global/misFacturas'} className=" border-orange-500 bg-slate-100 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={cinco} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Image source={cinco} resizeMethod="contain" style={{ height: 40, width: 40 }} />
                                 <Text className="text-lg ml-4">Mis facturas</Text>
                             </View>
                             <Image source={vector} />
@@ -90,9 +93,9 @@ export function PerfilStudentPage() {
                     <Text className="mt-5 ml-5 text-3xl">Soporte</Text>
 
                     <Link href={'/global/quienes-somos'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={seis} resizeMethod="contain" style={{ height: 45, width:40 }} />
+                                <Image source={seis} resizeMethod="contain" style={{ height: 45, width: 40 }} />
                                 <Text className="text-lg ml-4">¿Quiénes somos?</Text>
                             </View>
                             <Image source={vector} />
@@ -100,9 +103,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/global/como-funciona'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={siete} resizeMethod="contain" style={{ height: 35, width:40 }} />
+                                <Image source={siete} resizeMethod="contain" style={{ height: 35, width: 40 }} />
                                 <Text className="text-lg ml-4">¿Cómo funciona?</Text>
                             </View>
                             <Image source={vector} />
@@ -110,9 +113,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/global/nuestra-seguridad'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={ocho} resizeMethod="contain" style={{ height: 45, width:40 }} />
+                                <Image source={ocho} resizeMethod="contain" style={{ height: 45, width: 40 }} />
                                 <Text className="text-lg ml-4">Nuestra seguridad</Text>
                             </View>
                             <Image source={vector} />
@@ -120,9 +123,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/global/testimonios'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={nueve} resizeMethod="contain" style={{ height: 45, width:40 }} />
+                                <Image source={nueve} resizeMethod="contain" style={{ height: 45, width: 40 }} />
                                 <Text className="text-lg ml-4">Testimonios</Text>
                             </View>
                             <Image source={vector} />
@@ -130,9 +133,9 @@ export function PerfilStudentPage() {
                     </Link>
 
                     <Link href={'/global/centro-ayuda'} className="bg-slate-100 border-orange-500 border-2 mx-3 rounded-lg py-4 mt-5">
-                        <View className="mx-5 flex-row justify-around items-center w-80 ">
+                        <View className="mx-5 flex-row justify-around items-center " style={{width:containerWidth}}>
                             <View className="flex-row items-center" style={{ width: 250 }}>
-                                <Image source={diez} resizeMethod="contain" style={{ height: 40, width:40 }} />
+                                <Image source={diez} resizeMethod="contain" style={{ height: 40, width: 40 }} />
                                 <Text className="text-lg ml-4">Centro de ayuda</Text>
                             </View>
                             <Image source={vector} />
@@ -145,7 +148,7 @@ export function PerfilStudentPage() {
                             <Text className="pr-5 text-white text-2xl" >
                                 Cerrar sesión
                             </Text>
-                            <Image source={cerrarsession} resizeMethod="contain" style={{width:30, height:30}}/>
+                            <Image source={cerrarsession} resizeMethod="contain" style={{ width: 30, height: 30 }} />
                         </View>
                     </Link>
                 </View>

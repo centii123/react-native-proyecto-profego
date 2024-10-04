@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, TouchableHighlight, TextInput } from "react-native";
+import { View, Text, ScrollView, TouchableHighlight, TextInput, Dimensions } from "react-native";
 import * as DocumentPicker from "expo-document-picker"
 import HeaderComponent from "../components/header";
 //import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
@@ -7,7 +7,7 @@ import HeaderComponent from "../components/header";
 
 export function TareaPage() {
     const [documento, setDocumento] = useState(null);
-
+    const anchuraPantalla=Dimensions.get('window').width;
     const PdfLoad = async (num) => {
         try {
             const docRes = await DocumentPicker.getDocumentAsync({
@@ -60,14 +60,14 @@ export function TareaPage() {
                 </View>
 
                 <View className="border-2 border-orange-600 flex-row mx-3 mt-3">
-                    <View className="border-r-2 border-orange-600 w-48">
+                    <View className="border-r-2 border-orange-600" style={{ width: anchuraPantalla * 0.50 }}>
                         <Text className="text-center border-b-2 border-orange-600">Archivo Entregado</Text>
                         <Text className="border-b-2 border-orange-600 text-center">Estado de la Calificacion</Text>
                         <Text className="text-center border-b-2 border-orange-600">Calificacion</Text>
                         <Text className="text-center">Comentarios de la entrega</Text>
                     </View>
 
-                    <View style={{ width: 140 }}>
+                    <View style={{ width: anchuraPantalla * 0.43 }}>
                         <Text className="text-center border-b-2 border-orange-600">{'hola hermano como te ecuentras'.slice(0, 15)}...</Text>
                         <Text className="border-b-2 border-orange-600 text-center bg-green-400">Calificado</Text>
                         <Text className="text-center border-b-2 border-orange-600">100/100</Text>
